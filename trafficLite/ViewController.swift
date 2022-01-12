@@ -15,17 +15,26 @@ class ViewController: UIViewController {
     @IBOutlet var trafficButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.layer.cornerRadius = 0.5
+        
         redView.alpha = 0.3
-        yellowWiew.layer.cornerRadius = 0.5
+        
         yellowWiew.alpha = 0.3
-        greenWiew.layer.cornerRadius = 0.5
+        
         greenWiew.alpha = 0.3
         
-        trafficButton.layer.cornerRadius = 0.2
+        trafficButton.layer.cornerRadius = 10
+        
         
     }
 
+    override func viewDidLayoutSubviews() {
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowWiew.layer.cornerRadius = redView.frame.width / 2
+        greenWiew.layer.cornerRadius = redView.frame.width / 2
+    }
+       
+    
+    
     @IBAction func pushButton(_ sender: Any) {
         trafficButton.setTitle("NEXT", for: .normal)
         

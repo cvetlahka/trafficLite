@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trafficLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhg-RX-loZ">
-                                <rect key="frame" x="165" y="705" width="100" height="51"/>
+                                <rect key="frame" x="141" y="739" width="100" height="51"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="llT-OT-Swd"/>
+                                    <constraint firstAttribute="width" constant="100" id="NVU-SX-xqd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Start">
@@ -30,14 +30,15 @@
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZQ-nd-Gr2"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-wx-qlU">
-                                <rect key="frame" x="142" y="99" width="130" height="468"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-wx-qlU">
+                                <rect key="frame" x="130" y="99" width="130" height="468"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTQ-7G-E2i">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="iRC-wO-SDf"/>
+                                            <constraint firstAttribute="width" secondItem="zTQ-7G-E2i" secondAttribute="height" multiplier="1:1" id="ida-rk-mrJ"/>
                                             <constraint firstAttribute="height" constant="130" id="vmV-p3-gG7"/>
                                         </constraints>
                                     </view>
@@ -46,6 +47,7 @@
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="Cvo-ds-gHI"/>
+                                            <constraint firstAttribute="width" secondItem="Upr-f6-Yrk" secondAttribute="height" multiplier="1:1" id="aXt-Pd-54x"/>
                                             <constraint firstAttribute="width" constant="130" id="oCu-8W-EDq"/>
                                         </constraints>
                                     </view>
@@ -54,23 +56,29 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="5IX-Gf-CDn"/>
+                                            <constraint firstAttribute="width" secondItem="EWk-zw-gfz" secondAttribute="height" multiplier="1:1" id="lLa-Eh-xco"/>
                                             <constraint firstAttribute="width" constant="130" id="xD0-xL-nDX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="Dz1-jl-sDe"/>
+                                    <constraint firstAttribute="height" constant="468" id="HVk-Rh-201"/>
+                                    <constraint firstAttribute="width" constant="130" id="yh2-NV-XnQ"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhg-RX-loZ" secondAttribute="bottom" constant="106" id="DyS-rT-pc5"/>
-                            <constraint firstItem="Xhg-RX-loZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QDk-55-Eav"/>
-                            <constraint firstItem="WFa-wx-qlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g69-IY-oDb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xhg-RX-loZ" secondAttribute="trailing" constant="149" id="oZR-4q-RZL"/>
-                            <constraint firstItem="WFa-wx-qlU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="yfG-Ml-2FK"/>
+                            <constraint firstItem="Upr-f6-Yrk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:422" id="AFg-3o-Ze3"/>
+                            <constraint firstItem="WFa-wx-qlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G1G-Oy-hrk"/>
+                            <constraint firstItem="WFa-wx-qlU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="KMj-LO-ife"/>
+                            <constraint firstItem="EWk-zw-gfz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:422" id="LHN-Nq-WR2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhg-RX-loZ" secondAttribute="bottom" constant="20" id="Tj8-gy-5rW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xhg-RX-loZ" secondAttribute="trailing" constant="149" id="elm-MR-dIN"/>
+                            <constraint firstItem="Xhg-RX-loZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:211" id="kUO-zp-Mlc"/>
+                            <constraint firstItem="zTQ-7G-E2i" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:422" id="po5-n8-kGI"/>
+                            <constraint firstItem="Xhg-RX-loZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="qBF-ak-qtr"/>
                         </constraints>
                     </view>
                     <connections>
